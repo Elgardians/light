@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розумний світлофор - Ігри та Команда</title>
+    <!-- Підключення Tailwind CSS для стилів -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Підключення шрифту Inter з Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Простий і світлий градієнт для фону */
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+        }
+        /* Адаптивний контейнер для iframe та зображень */
+        .responsive-media {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            /* Співвідношення сторін 485:402 */
+            padding-top: 82.88%; /* (402 / 485) * 100% */
+        }
+        .responsive-media iframe,
+        .responsive-media img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 0.5rem; /* Закруглені кути */
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <!-- Основний контейнер сторінки -->
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <!-- Заголовок сторінки -->
+        <header class="text-center mb-10 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-yellow-500 to-red-500">
+                Розумний світлофор
+            </h1>
+            <p class="text-2xl md:text-3xl font-bold text-gray-700 mt-2">Наші Ігри</p>
+        </header>
+
+        <!-- Секція з іграми та фото -->
+        <main class="flex flex-col items-center gap-12">
+
+            <!-- Блок 1: Гра + Фото -->
+            <div class="w-full max-w-6xl bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-4 md:p-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                    <!-- Гра -->
+                    <div class="responsive-media">
+                        <iframe src="https://scratch.mit.edu/projects/1188271501/embed" allowtransparency="true" scrolling="no" allowfullscreen></iframe>
+                    </div>
+                    <!-- Фото -->
+                    <div class="responsive-media">
+                        <img 
+                            src="1.jpg" 
+                            alt="Фото до гри" 
+                            class="object-cover shadow-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/485x402/e2e8f0/334155?text=Помилка';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок 2: Гра + Фото -->
+            <div class="w-full max-w-6xl bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-4 md:p-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                    <!-- Фото (поміняно місцями для різноманітності) -->
+                    <div class="responsive-media lg:order-last">
+                         <img 
+                            src="2.jpg" 
+                            alt="Фото до гри" 
+                            class="object-cover shadow-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/485x402/e2e8f0/334155?text=Помилка';">
+                    </div>
+                    <!-- Гра -->
+                    <div class="responsive-media">
+                       <iframe src="https://scratch.mit.edu/projects/1188271918/embed" allowtransparency="true" scrolling="no" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок 3: Гра + Фото -->
+            <div class="w-full max-w-6xl bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-4 md:p-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                    <!-- Гра -->
+                    <div class="responsive-media">
+                        <iframe src="https://scratch.mit.edu/projects/1188272089/embed" allowtransparency="true" scrolling="no" allowfullscreen></iframe>
+                    </div>
+                    <!-- Фото -->
+                    <div class="responsive-media">
+                        <img 
+                            src="3.jpg" 
+                            alt="Фото до гри" 
+                            class="object-cover shadow-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/485x402/e2e8f0/334155?text=Помилка';">
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Футер (нижній колонтитул) -->
+        <footer class="text-center mt-12 md:mt-16 text-gray-600">
+            <p>Створено для дитячого табору. Гарної гри!</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
